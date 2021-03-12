@@ -10,6 +10,7 @@
 
 #### Cherise Hoang
 - z5316505
+- github username: cherisehoang
 
 #### Eirfan Yuswira
 - z5279251
