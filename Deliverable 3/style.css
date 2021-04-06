@@ -1,14 +1,13 @@
 body {
     background-color: #F6DF8A;
     height: 100%; 
-    margin: 0; 
+    margin: auto; 
 }
 
 nav {
     list-style-type: none;
-    margin: 0;
     padding:20px;
-    
+    margin-left: 330px
 }
 
 main {
@@ -43,13 +42,12 @@ nav a:hover {
 
 .column {
     float: left;
-    padding-left: 15%;
 }
 
 .mainColumn {
     float: left;
     padding-right: 1%;
-    padding-left: 11%;
+    padding-left: 10%;
 }
 
 .flex-container {
@@ -60,9 +58,9 @@ nav a:hover {
     padding-left: 9%;  
 }
 
-.feedContainer{
+.eventColumn{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-count: 2;
     height: 100%; 
     width: 100%;
@@ -70,7 +68,9 @@ nav a:hover {
 }
 
 .eventImage{
-    padding-left: 20%;
+    border-radius: 20px;
+    margin-left: 20%;
+    padding-bottom: 5px; 
     width: 15%;
     height: 5%;
 }
