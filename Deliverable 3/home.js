@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
 fetch(url)
@@ -47,3 +48,10 @@ window.onclick = function(event) {
 document.getElementById("Networking Button").addEventListener("click", function(){
     location.href="index.html"
 });
+=======
+var index = document.getElementById("eventFeed"); 
+const test = document.createElement("img");
+test.src = "./test.jpg";
+test.setAttribute("class", "eventImage");
+index.appendChild(test);
+>>>>>>> login
