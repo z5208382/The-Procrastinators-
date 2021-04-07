@@ -74,3 +74,56 @@ nav a:hover {
     width: 15%;
     height: 5%;
 }
+
+#event-screen {
+    display: block;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event-screen h2 {
+    display: inline;
+}
+
+#event-screen p {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+.event-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#feedback-btn {
+    float: right;
+    padding: 5px 10px;
+}
+
+#feedback-btn:hover {
+    cursor: pointer;
+    background-color: #636363;
+    color: white;
+}
+
+#event-location {
+    font-size: 20px;
+}
+
+.event-details {
+    padding: 10px;
+    margin-bottom: 8%;
+    background-color: #fff0ba;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 10px;
+}
