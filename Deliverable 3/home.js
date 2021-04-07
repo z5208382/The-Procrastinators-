@@ -10,7 +10,7 @@ fetch(url)
                 eventImage.src = r[i].image_url;
                 eventImage.setAttribute("class", "feedImage");
                 eventImage.setAttribute("id", "feedImage");
-                index.appendChild(eventImage).addEventListener('click', function(){alert("Hello World!");});
+                index.appendChild(eventImage).addEventListener('click', function(){location.href = "event_details.html";});
             }
         }
     });
