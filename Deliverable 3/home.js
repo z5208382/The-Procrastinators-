@@ -11,16 +11,9 @@ fetch(url)
                 eventImage.src = r[i].image_url;
                 eventImage.setAttribute("class", "eventImage");
                 eventImage.setAttribute("id", "eventImage");
-                index.appendChild(eventImage);
+                index.appendChild(eventImage).addEventListener('click', function(){alert("Hello World!");});
             }
         }
     });
 document.getElementById("Home Button").addEventListener("click", function(){alert("Hello World!");});
-
-var elements = document.getElementsByClassName("eventImage");
-
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', function(){alert("Hello World!");});
-}
-
 document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});

@@ -74,6 +74,13 @@ nav a:hover {
     width: 15%;
     height: 5%;
 }
+.societyImage{
+    border-radius: 20px;
+    margin-left: 20%;
+    padding-bottom: 5px; 
+    width: 15%;
+    height: 5%;
+}
 
 .eventImage:hover {
     box-shadow: 0 0 4px 2px #33C8FF;
