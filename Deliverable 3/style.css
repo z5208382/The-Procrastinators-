@@ -110,6 +110,10 @@ nav a:hover {
 }
 
 #feedback-btn:hover {
+    cursor: pointer;
+    background-color: #636363;
+    color: white;
+}
 
 #main-screen {
     display: block;
