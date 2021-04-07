@@ -19,3 +19,7 @@ fetch(url)
             }
         }
     })
+
+document.getElementById('feedback-btn').addEventListener('click', () => {
+    location.href = "feedback.html";
+})
