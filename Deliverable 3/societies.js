@@ -11,10 +11,13 @@ fetch(url)
                     var index = document.getElementById("eventFeed"); 
                     const societyImage = document.createElement("img");
                     societyImage.src = r[i].hosts[0].image;
-                    societyImage.setAttribute("class", "societyImage");
-                    societyImage.setAttribute("id", "societyImage");
+                    societyImage.setAttribute("class", "feedImage");
+                    societyImage.setAttribute("id", "feedImage");
                     index.appendChild(societyImage).addEventListener('click', function(){alert("Hello World!");});
                 }
             }
         }
     });
+
+document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html"});
+document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
