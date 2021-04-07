@@ -15,14 +15,14 @@ fetch(url)
             }
         }
     });
-document.getElementById("Home Button").addEventListener("click", function(){alert("Hello World!");});
+document.getElementById("Home Button").addEventListener("click", function(){alert("index.html");});
 document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
 
 // Get the modal
 var modal = document.getElementById("modal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("Filter");
+var btn = document.getElementById("Filter Button");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -43,3 +43,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+document.getElementById("Networking Button").addEventListener("click", function(){
+    location.href="index.html"
+});

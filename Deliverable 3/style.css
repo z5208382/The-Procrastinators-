@@ -36,6 +36,7 @@ a {
     padding-top: 5%; 
     width: 100%; 
     text-align: center;
+    align-items: center;
 }
 
 .filters {
@@ -135,6 +136,7 @@ p {
     border-color: black;
     border-radius: 20px;
 }
+
 .societyBanner{
     width: 25%;
     border: 5px solid rgb(195, 195, 195);
