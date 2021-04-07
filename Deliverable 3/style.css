@@ -1,7 +1,7 @@
 body {
     background-color: #F6DF8A;
-    height: 100%; 
-    margin: auto; 
+    height: 100%;
+    margin: auto;
 }
 
 nav {
@@ -33,8 +33,8 @@ a {
 }
 
 .about {
-    padding-top: 5%; 
-    width: 100%; 
+    padding-top: 5%;
+    width: 100%;
     text-align: center;
     align-items: center;
 }
@@ -82,7 +82,7 @@ nav a:hover {
 .feedImage{
     border-radius: 20px;
     margin-left: 20%;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
     width: 15%;
     height: 5%;
 }
@@ -378,10 +378,38 @@ nav a:hover {
     color: white;
 }
 /*star rating styling*/
-.clip-star {
-  background: gold;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  display: inline-block;
-  height: 100px;
-  width: 100px;
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }
