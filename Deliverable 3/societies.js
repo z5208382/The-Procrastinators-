@@ -13,7 +13,7 @@ fetch(url)
                     societyImage.src = r[i].hosts[0].image;
                     societyImage.setAttribute("class", "feedImage");
                     societyImage.setAttribute("id", "feedImage");
-                    index.appendChild(societyImage).addEventListener('click', function(){alert("Hello World!");});
+                    index.appendChild(societyImage).addEventListener('click', function(){location.href="society.html"});
                 }
             }
         }
@@ -21,3 +21,4 @@ fetch(url)
 
 document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html"});
 document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
+
