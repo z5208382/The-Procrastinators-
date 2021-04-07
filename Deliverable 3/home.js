@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
 fetch(url)
     .then(r => r.json())
@@ -16,8 +14,9 @@ fetch(url)
             }
         }
     });
-document.getElementById("Home Button").addEventListener("click", function(){alert("index.html");});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
+document.getElementById("ProfileButton").addEventListener("click", function(){location.href="profile.html"});
 
 // Get the modal
 var modal = document.getElementById("modal");
@@ -48,10 +47,4 @@ window.onclick = function(event) {
 document.getElementById("Networking Button").addEventListener("click", function(){
     location.href="index.html"
 });
-=======
-var index = document.getElementById("eventFeed"); 
-const test = document.createElement("img");
-test.src = "./test.jpg";
-test.setAttribute("class", "eventImage");
-index.appendChild(test);
->>>>>>> login
+
