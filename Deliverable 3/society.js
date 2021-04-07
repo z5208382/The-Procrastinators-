@@ -27,7 +27,7 @@ document.getElementById("Events Button").addEventListener("click", function(){
         .then(r => {
             for(i = 0; i < r.length; i++){
                 if(r[i].hosts[0]){
-                    if(r[i].hosts[0].name == "UNSW Education Society"){
+                    if(r[i].hosts[0].name == "UNSW Anime Society"){
                         var index = document.getElementById("societyEvents"); 
                         const societyImage = document.createElement("img");
                         societyImage.src = r[i].hosts[0].image;

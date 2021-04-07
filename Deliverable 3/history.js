@@ -2,7 +2,7 @@ var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_star
 fetch(url)
     .then(r => r.json())
     .then(r => {
-        for(i = 25; i < 40; i++){
+        for(i = 10; i < 25; i++){
             if(!(r[i].image_url.includes("default")))
             {
                 var index = document.getElementById("eventFeed"); 
@@ -10,7 +10,7 @@ fetch(url)
                 eventImage.src = r[i].image_url;
                 eventImage.setAttribute("class", "feedImage");
                 eventImage.setAttribute("id", "feedImage");
-                index.appendChild(eventImage).addEventListener('click', function(){location.href='feedback.html';});
+                index.appendChild(eventImage).addEventListener('click', function(){location.href='event_details.html';});
             }
         }
 });

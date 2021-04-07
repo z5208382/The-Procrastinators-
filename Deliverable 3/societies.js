@@ -3,7 +3,7 @@ fetch(url)
     .then(r => r.json())
     .then(r => {
         var societies = [];
-        for(i = 0; i < r.length; i++){
+        for(i = 15; i < 80; i++){
             if(r[i].hosts[0]){
                 var society = r[i].hosts[0].name;
                 if(societies.indexOf(society) == -1) {
