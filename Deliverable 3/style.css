@@ -87,73 +87,46 @@ nav a:hover {
     height: 5%;
 }
 
-.feedImage:hover {
-    box-shadow: 0 0 4px 2px #33C8FF;
-  }
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+#event-screen {
     display: block;
-    padding: 15px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Modal close button  */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+#event-screen h2 {
+    display: inline;
+}
+
+#event-screen p {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+.event-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event-name {
+    font-size: 32px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
-.close:hover,
+#feedback-btn {
+    float: right;
+    padding: 5px 10px;
+}
 
-.close:focus {
-    color: black;
-    text-decoration: none;
+#feedback-btn:hover {
     cursor: pointer;
+    background-color: #636363;
+    color: white;
 }
 
-p {
-    display: block;
-    text-align: center;
-    border-color: black;
-    border-radius: 20px;
-}
-
-.societyBanner{
-    width: 25%;
-    border: 5px solid rgb(195, 195, 195);
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #aaa;
-}
-
-.societyImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-   
 #main-screen {
     display: block;
     margin-left: auto;
@@ -161,7 +134,6 @@ p {
     text-align: center;
 
 }
-
 
 #main-logo {
     display: block;
@@ -270,6 +242,19 @@ p {
     cursor: pointer;
     background-color: #636363;
     color: white;
+}
+
+#event-location {
+    font-size: 20px;
+}
+
+.event-details {
+    padding: 10px;
+    margin-bottom: 8%;
+    background-color: #fff0ba;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 10px;
 }
 
 .divider {
