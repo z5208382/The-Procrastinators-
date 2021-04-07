@@ -25,7 +25,7 @@ header {
 li {
     float: left;
 }
-  
+
 a {
     display: block;
     padding: 15px;
@@ -62,18 +62,18 @@ nav a:hover {
 .flex-container {
     display: flex;
     flex-direction: row;
-    height: 100%; 
+    height: 100%;
     width: 100%;
-    padding-left: 9%;  
+    padding-left: 9%;
 }
 
 .eventColumn{
     display: flex;
     flex-direction: column;
     column-count: 2;
-    height: 100%; 
+    height: 100%;
     width: 100%;
-    padding-left: 3%;  
+    padding-left: 3%;
 }
 
 .eventPageFilters {
@@ -359,4 +359,12 @@ p {
     cursor: pointer;
     background-color: #636363;
     color: white;
+}
+/*star rating styling*/
+.clip-star {
+  background: gold;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: inline-block;
+  height: 100px;
+  width: 100px;
 }
