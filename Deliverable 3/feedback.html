@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
@@ -23,16 +24,28 @@
             <div id="Feedback" class="mainColumn">
               <h1 style="width: 100%">Feedback</h1>
               <h2 class="mainColumn" style="width: 100%">Rating</h2>
-              <div class="clip-star" style="margin-left: 10%;"></div>
+              <!-- <div class="clip-star" style="margin-left: 10%;"></div>
               <div class="clip-star"></div>
               <div class="clip-star"></div>
               <div class="clip-star"></div>
-              <div class="clip-star" style="margin-right: 20%;"></div>
+              <div class="clip-star" style="margin-right: 20%;"></div> -->
+              <div class="rate" style="margin-left: 9%;">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div style="margin-right: 20%;">
               <h2 class="mainColumn" style="width: 100%;">Review Title</h2>
               <textarea id="story" name="story"rows="5" cols="33" style="width: 50%; margin-left: 10%;"> </textarea>
               <h2 class="mainColumn"style="width: 100%;">Review</h2>
               <textarea id="story" name="story"rows="5" cols="33" style="width: 50%; margin-left: 10%;"> </textarea>
-              <input id= "cancelBtn" type="button" value="Cancel" style="width: 50%; margin-left: 10%;"/> 
+              <input id= "cancelBtn" type="button" value="Cancel" style="width: 50%; margin-left: 10%;"/>
               <input id= "submitBtn" type="submit" value="Submit" style="width: 50%; margin-left: 10%;"/>
             </div>
         </main>
