@@ -50,11 +50,12 @@ nav a:hover {
 
 .column {
     float: left;
+    padding-right: 18%;
 }
 
 .mainColumn {
     float: left;
-    padding-right: 23%;
+    padding-right: 20%;
     padding-left: 10%;
 }
 

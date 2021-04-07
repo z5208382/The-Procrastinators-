@@ -40,7 +40,7 @@ a {
 }
 
 .filters {
-    margin-left: 21.5%;
+    margin-left: 18%;
     margin-right: 21.5%
 }
 
@@ -50,6 +50,7 @@ nav a:hover {
 
 .column {
     float: left;
+    padding-right: 18%;
 }
 
 .mainColumn {
