@@ -2,7 +2,7 @@ var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_star
 fetch(url)
     .then(r => r.json())
     .then(r => {
-        for(i = 10; i < 25; i++){
+        for(i = 0; i < 15; i++){
             if(!(r[i].image_url.includes("default")))
             {
                 var index = document.getElementById("eventFeed"); 

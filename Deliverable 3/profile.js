@@ -2,14 +2,14 @@ const url = "https://dev-api.linkupevents.com.au/societies?uni=unsw";
 fetch(url)
     .then(r => r.json())
     .then(r => {
-        for(i = 0; i < 12; i++)
+        for(i = 120; i < 135; i++)
         {
             var index = document.getElementById("eventFeed"); 
             const societyImage = document.createElement("img");
             societyImage.src = r[i].image_url
             societyImage.setAttribute("class", "feedImage");
             societyImage.setAttribute("id", "feedImage");
-            index.appendChild(societyImage)
+            index.appendChild(societyImage).addEventListener('click', function(){location.href="society.html"});
         }
     });
 
