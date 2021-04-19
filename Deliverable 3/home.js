@@ -5,11 +5,13 @@ fetch(url)
         for(i = 0; i < r.length; i++){
             if(!(r[i].image_url.includes("default")))
             {
-                var index = document.getElementById("eventFeed"); 
+                var index = document.getElementById("eventFeed");
                 const eventImage = document.createElement("img");
                 eventImage.src = r[i].image_url;
                 eventImage.setAttribute("class", "feedImage");
-                eventImage.setAttribute("id", "feedImage");
+                id = r[i].id;
+                console.log(id);
+                eventImage.setAttribute("id", id);
                 index.appendChild(eventImage).addEventListener('click', function(){location.href = "eventdetails.html";});
             }
         }

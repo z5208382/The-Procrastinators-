@@ -1,0 +1,417 @@
+@import url(societyStyle.css);
+
+body {
+    background-color: #F6DF8A;
+    height: 100%;
+    margin: auto;
+}
+
+nav {
+    list-style-type: none;
+    padding:20px;
+    margin-left: 330px
+}
+
+main {
+    padding-top: 8%;
+    margin: auto;
+    width: 80%;
+}
+
+header {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    padding: 15px;
+    background-color: #F3E4E4;
+}
+
+.about {
+    padding-top: 5%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.filters {
+    margin-left: 18%;
+    margin-right: 21.5%
+}
+
+nav a:hover {
+    background-color: #33C8FF;
+}
+
+.column {
+    float: left;
+    padding-right: 18%;
+}
+
+.mainColumn {
+    float: left;
+    padding-right: 1%;
+    padding-left: 10%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding-left: 9%;
+}
+
+.eventColumn{
+    display: flex;
+    flex-direction: column;
+    column-count: 2;
+    height: 100%;
+    width: 100%;
+    padding-left: 3%;
+}
+
+.eventPageFilters {
+    margin-left: 73%;
+}
+.feedImage{
+    border-radius: 20px;
+    margin-left: 20%;
+    padding-bottom: 5px;
+    width: 15%;
+    height: 5%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    display: block;
+    padding: 15px;
+}
+
+/* Modal close button  */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#event-screen {
+    display: block;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event-screen h2 {
+    display: inline;
+}
+
+#event-screen p {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+.event-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#event-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#feedback-btn {
+    float: right;
+    padding: 5px 10px;
+}
+
+#feedback-btn:hover {
+    cursor: pointer;
+    background-color: #636363;
+    color: white;
+}
+
+#main-screen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+#main-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    margin-top: 10vh;
+}
+
+#main-flex {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 50px auto;
+}
+
+.main-button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 0;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    background-color: #636363;
+    color: white;
+}
+
+#login-screen {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 500px;
+    padding: 50px;
+    border: 1px solid #bdbdbd;
+}
+
+#login-logo {
+    display: block;
+    margin: 10px auto;
+    height: 200px;
+}
+
+#login-screen h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+#login-message {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.form {
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input {
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#remember-me-checkbox {
+    display: inline;
+    float: left;
+}
+
+#remember-me {
+    display: inline;
+    font-size: 16px;
+    float: left;
+    margin: 0 0 0 5px;
+    color: #6b6b6b;
+}
+
+#forgot-password {
+    display: inline;
+    background-color: rgba(0, 0, 0, 0);
+    color: #6b6b6b;
+    text-decoration: none;
+    padding: 0;
+    float: right;
+}
+
+#login-button {
+    display: block;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 40px;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login-button:hover {
+    cursor: pointer;
+    background-color: #636363;
+    color: white;
+}
+
+#event-location {
+    font-size: 20px;
+}
+
+.event-details {
+    padding: 10px;
+    margin-bottom: 8%;
+    background-color: #fff0ba;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.divider {
+    width: 300px;
+    margin: 30px auto;
+}
+
+.login-divider {
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2px;
+    margin-bottom: 0;
+    z-index: 2;
+}
+
+.solid-line {
+    margin: 0 auto;
+    width: 300px;;
+    margin-top: -15px;
+    z-index: 0;
+    color: #9c9c9c;
+}
+
+#google-login {
+    height: 32px;
+    margin-right: 20px;
+}
+
+#facebook-login {
+    height: 32px;
+}
+
+.social-btn:hover {
+    cursor: pointer;
+}
+
+#signup-screen {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 500px;
+    padding: 50px;
+    border: 1px solid #bdbdbd;
+}
+
+#signup-screen h2 {
+    font-size: 32px;
+}
+
+#signup-message {
+    font-size: 20px;
+}
+
+#signup-screen .social-media-login {
+    margin-top: 40px;
+}
+
+#signup-screen .social-btn {
+    height: 35px;
+}
+
+#signup-screen .input {
+    width: 250px;
+    margin-bottom: 15px;
+    border: 0;
+    padding: 5px 0 5px 10px;
+}
+
+#signup-button {
+    display: block;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 40px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signup-button:hover {
+    cursor: pointer;
+    background-color: #636363;
+    color: white;
+}
+/*star rating styling*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

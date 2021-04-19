@@ -1,0 +1,2 @@
+document.getElementById("cancelBtn").addEventListener("click", function(){location.href="feedback.html";});
+document.getElementById("submitBtn").addEventListener("click", function(){location.href="history.html";});
