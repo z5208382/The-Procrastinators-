@@ -15,10 +15,28 @@ fetch(url)
             }
         }
     });
+
 document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("ProfileButton").addEventListener("click", function(){location.href="profile.html"});
 
+document.getElementById("test-button").addEventListener("click", () => {
+  console.log('button pressed');
+  const body = {
+    test : 1
+  }
+  fetch('http://localhost:5000/test', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  }).then((response) => {
+      response.json().then(result => {
+        console.log(`response: ${JSON.stringify(result)}`);
+      })
+  })
+});
 // Get the modal
 var modal = document.getElementById("modal");
 

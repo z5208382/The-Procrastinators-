@@ -1,4 +1,5 @@
-from flask import Flask
+from json import dumps
+from flask import Flask, request
 from flask import render_template
 import os
 import sys
@@ -27,6 +28,13 @@ def society():
 @app.route('/Profile')
 def profile(): 
     return render_template('profile.html')
+
+@app.route('/test', methods=['POST'])
+def test():
+    response = request.get_json()
+    print(response)
+    result = {'data' : 'returned'}
+    return dumps(result)
 
 if __name__ == '__main__':
     app.run(host='localhost', port=5000, debug=True)
