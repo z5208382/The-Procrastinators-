@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    </head>
+        
+    <body>
+
+        <header>
+            <div class="column"> 
+                <img src="{{ url_for('static',filename='unnamed.png') }}" width=100% height=100%> 
+            </div>
+            <div class="column"> 
+                <nav> 
+                    <li> <a id="Home Button"> Home </a> </li>
+                    <li> <a id="Societies"> Societies </a> </li>
+                    <li> <a id="ProfileButton"> Profile </a> </li>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div id="societyBanner" class="societyBanner"></div>
+            <h1 id="societyName" class="mainColumn" style="padding-left: 20%;"></h1>
+            <div class="filters"> 
+                <nav class="eventPageFilters"> 
+                    <li> <a id="About Button"> About </a> </li>
+                    <li> <a id="Events Button"> Events </a> </li>
+                </nav>
+            </div>
+            <div id="aboutSociety" class="about"></div> 
+            <div id="societyEvents" class="about"></div>
+            <script src="{{ url_for('static',filename='society.js') }}"></script>
+        </main>
+
+    </body>
+</html>
