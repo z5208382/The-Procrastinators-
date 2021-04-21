@@ -27,6 +27,6 @@ document.getElementById('calendar-btn').addEventListener('click', () => {
     alert("Calendar URL Copied to Clipboard!");
 })
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
-document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
-document.getElementById("ProfileButton").addEventListener("click", function(){location.href="profile.html"});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
+document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
+document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});

@@ -16,9 +16,9 @@ fetch(url)
         }
     });
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
-document.getElementById("ProfileButton").addEventListener("click", function(){location.href="profile.html"});
+document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});
 
 document.getElementById("test-button").addEventListener("click", () => {
   console.log('button pressed');
