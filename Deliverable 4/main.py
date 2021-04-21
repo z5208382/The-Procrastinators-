@@ -3,15 +3,20 @@ from flask import Flask, request
 from flask import render_template
 import os
 import sys
+import helper
 
 if sys.platform.lower() == "win32": 
     os.system('color')
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
-    return render_template('index.html')
+    if(request.method == 'GET'):
+        string = dumps(helper.getEvents())
+        print(string)
+        return render_template('index.html')
+
 
 @app.route('/Eventdetails')
 def event():
@@ -29,11 +34,11 @@ def society():
 def profile(): 
     return render_template('profile.html')
 
-@app.route('/test', methods=['POST'])
+@app.route('/test', methods=['POST', 'GET'])
 def test():
     response = request.get_json()
     print(response)
-    result = {'data' : 'returned'}
+    result = {'data' : 'poop'}
     return dumps(result)
 
 if __name__ == '__main__':
