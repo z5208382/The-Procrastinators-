@@ -26,6 +26,6 @@ document.getElementById('calendar-btn').addEventListener('click', () => {
     alert("Calendar URL Copied to Clipboard!");
 })
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/home";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});

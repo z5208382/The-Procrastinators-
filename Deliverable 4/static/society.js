@@ -41,6 +41,6 @@ document.getElementById("Events Button").addEventListener("click", function(){
         });
     });
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="/"});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/Home"});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});

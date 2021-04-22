@@ -13,6 +13,6 @@ fetch(url)
         }
     });
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/home";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("History Button").addEventListener("click", function(){location.href="History"});
