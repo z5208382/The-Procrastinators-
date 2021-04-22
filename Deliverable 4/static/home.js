@@ -16,6 +16,7 @@ fetch(url)
         }
     });
 
+<<<<<<< HEAD
 // const body = {
 //   id : 1,
 //   url: 2,
@@ -40,6 +41,8 @@ fetch(url)
 //     })
 // });
 
+=======
+>>>>>>> html_fix1
 document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});
