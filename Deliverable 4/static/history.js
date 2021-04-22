@@ -10,11 +10,11 @@ fetch(url)
                 eventImage.src = r[i].image_url;
                 eventImage.setAttribute("class", "feedImage");
                 eventImage.setAttribute("id", "feedImage");
-                index.appendChild(eventImage).addEventListener('click', function(){location.href='event_details.html';});
+                index.appendChild(eventImage).addEventListener('click', function(){location.href='Eventdetails';});
             }
         }
 });
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
-document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
-document.getElementById("History Button").addEventListener("click", function(){location.href="history.html"});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
+document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
+document.getElementById("History Button").addEventListener("click", function(){location.href="History"});

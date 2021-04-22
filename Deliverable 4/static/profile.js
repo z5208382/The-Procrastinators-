@@ -8,11 +8,11 @@ fetch(url)
             const societyImage = document.createElement("img");
             societyImage.src = r[i].image_url
             societyImage.setAttribute("class", "feedImage");
-            societyImage.setAttribute("id", "feedImage");
-            index.appendChild(societyImage).addEventListener('click', function(){location.href="society.html"});
+            societyImage.setAttribute("id", r[i].id);
+            index.appendChild(societyImage).addEventListener('click', function(){location.href="Society?id="+this.id;});
         }
     });
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
-document.getElementById("Societies").addEventListener("click", function(){location.href="societies.html"});
-document.getElementById("History Button").addEventListener("click", function(){location.href="history.html"});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
+document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
+document.getElementById("History Button").addEventListener("click", function(){location.href="History"});

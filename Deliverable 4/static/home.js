@@ -16,27 +16,51 @@ fetch(url)
         }
     });
 
-document.getElementById("Home Button").addEventListener("click", function(){location.href="index.html";});
-document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
-document.getElementById("ProfileButton").addEventListener("click", function(){location.href="profile.html"});
+// const body = {
+//   id : 1,
+//   url: 2,
+//   title: 3,
+//   time_start: 4,
+//   time_finish: 5,
+//   description: 6,
+//   location: 7,
+//   hosts: [],
+//   image_url: 8,
+//   categories: []
+// }
+// fetch('http://localhost:5000/home', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type' : 'application/json'
+//   },
+//   body: JSON.stringify(body),
+// }).then((response) => {
+//     response.json().then(result => {
+//       console.log(result.JSON);
+//     })
+// });
 
-document.getElementById("test-button").addEventListener("click", () => {
-  console.log('button pressed');
-  const body = {
-    test : 1
-  }
-  fetch('http://localhost:5000/test', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  }).then((response) => {
-      response.json().then(result => {
-        console.log(`response: ${JSON.stringify(result)}`);
-      })
-  })
-});
+document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
+document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
+document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});
+
+// document.getElementById("test-button").addEventListener("click", () => {
+//   console.log('button pressed');
+//   const body = {
+//     test : 1
+//   }
+//   fetch('http://localhost:5000/test', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(body),
+//   }).then((response) => {
+//       response.json().then(result => {
+//         console.log(`response: ${JSON.stringify(result)}`);
+//       })
+//   })
+// });
 // Get the modal
 var modal = document.getElementById("modal");
 
@@ -64,6 +88,15 @@ window.onclick = function(event) {
 }
 
 document.getElementById("Networking Button").addEventListener("click", function(){
-    location.href="index.html"
+    location.href="/"
+});
+document.getElementById("Seminar Button").addEventListener("click", function(){
+  location.href="/"
+});
+document.getElementById("Social Button").addEventListener("click", function(){
+  location.href="/"
+});
+document.getElementById("Workshop Button").addEventListener("click", function(){
+  location.href="/"
 });
 

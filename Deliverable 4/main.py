@@ -1,4 +1,4 @@
-from json import dumps
+from json import *
 from flask import Flask, request
 from flask import render_template
 import os
@@ -12,11 +12,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    if(request.method == 'GET'):
-        string = dumps(helper.getEvents())
-        print(string)
         return render_template('index.html')
-
 
 @app.route('/Eventdetails')
 def event():
@@ -34,12 +30,20 @@ def society():
 def profile(): 
     return render_template('profile.html')
 
-@app.route('/test', methods=['POST', 'GET'])
-def test():
-    response = request.get_json()
-    print(response)
-    result = {'data' : 'poop'}
-    return dumps(result)
+@app.route('/Feedback')
+def feedback():
+    return render_template('feedback.html')
+
+@app.route('/History')
+def history(): 
+    return render_template('history.html')
+
+# @app.route('/test', methods=['POST', 'GET'])
+# def test():
+#     response = request.get_json()
+#     print(response)
+#     result = {'data' : 'poop'}
+#     return dumps(result)
 
 if __name__ == '__main__':
     app.run(host='localhost', port=5000, debug=True)
