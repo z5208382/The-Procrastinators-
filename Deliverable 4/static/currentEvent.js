@@ -6,7 +6,6 @@ fetch(url)
         var url = new URL(localUrl);
         var id = url.searchParams.get("id");
         for (let event of result) {
-            // Using dummy data
             if (event.id === id) {
                 const imgHeader = event.image_url;
                 const eventName = event.title;

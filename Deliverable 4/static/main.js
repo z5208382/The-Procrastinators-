@@ -13,9 +13,9 @@ document.getElementById('main-signup-button').addEventListener('click', () => {
 })
 
 document.getElementById('login-button').addEventListener('click', () => {
-    location.href = "index.html"
+    location.href = "Home"
 })
 
 document.getElementById('signup-button').addEventListener('click', () => {
-    location.href = "index.html"
+    location.href = "Home"
 })
