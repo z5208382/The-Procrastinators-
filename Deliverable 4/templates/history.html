@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
     </head>
         
     <body>
 
         <header>
             <div class="column"> 
-                <img src="unnamed.png" width=100% height=100%> 
+                <img src="static/unnamed.png" width=100% height=100%> 
             </div>
             <div class="mainColumn"> 
                 <nav> 
@@ -25,7 +25,7 @@
             </div>
 
             <div id="eventFeed" class="feedContainer">
-                <script src="history.js"></script>
+                <script src="static/history.js"></script>
             </div>
         </main>
 

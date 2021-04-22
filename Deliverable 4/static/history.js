@@ -9,8 +9,8 @@ fetch(url)
                 const eventImage = document.createElement("img");
                 eventImage.src = r[i].image_url;
                 eventImage.setAttribute("class", "feedImage");
-                eventImage.setAttribute("id", "feedImage");
-                index.appendChild(eventImage).addEventListener('click', function(){location.href='Eventdetails';});
+                eventImage.setAttribute("id", r[i].id);
+                index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
             }
         }
 });
