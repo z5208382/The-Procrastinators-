@@ -11,7 +11,11 @@ if sys.platform.lower() == "win32":
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
-def index():
+def logIn():
+        return render_template('main.html')
+
+@app.route('/Home')
+def index(): 
         return render_template('index.html')
 
 @app.route('/Eventdetails')
