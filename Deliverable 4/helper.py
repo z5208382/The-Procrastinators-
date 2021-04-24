@@ -6,7 +6,7 @@ db = None
 
 def getEvents(): 
     try:
-        db = psycopg2.connect("dbname=seng2021")
+        db = psycopg2.connect("dbname=template1")
         db.autocommit = True
         cursor = db.cursor()
         cursor.execute("Select * From Events where id = 2979283185636941")
@@ -19,7 +19,7 @@ def getEvents():
 
 def getSocieties(): 
     try:
-        db = psycopg2.connect("dbname=seng2021")
+        db = psycopg2.connect("dbname=template1")
         db.autocommit = True
         cursor = db.cursor()
         cursor.execute("Select * From Societies")
@@ -32,7 +32,7 @@ def getSocieties():
 
 def getSociety(societyID):
     try:
-        db = psycopg2.connect("dbname=seng2021")
+        db = psycopg2.connect("dbname=template1")
         db.autocommit = True
         cursor = db.cursor()
         cursor.execute("Select * From Societies where id = %s", (societyID,))
@@ -46,7 +46,7 @@ def getSociety(societyID):
 #instead of user can probably use a token instead. 
 def getProfile(userID): 
     try:
-        db = psycopg2.connect("dbname=seng2021")
+        db = psycopg2.connect("dbname=template1")
         db.autocommit = True
         cursor = db.cursor()
         cursor.execute("Select * From Profile where id = %s", (userID,))
@@ -59,7 +59,7 @@ def getProfile(userID):
 
 def getFilterEvents(filter):
     try:
-        db = psycopg2.connect("dbname=seng2021")
+        db = psycopg2.connect("dbname=template1")
         db.autocommit = True
         cursor = db.cursor()
         cursor.execute("Select eventId from EventCategories where categoryId = %s ", (filter,))

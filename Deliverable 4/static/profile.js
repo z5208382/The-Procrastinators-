@@ -15,4 +15,8 @@ fetch(url)
 
 document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
+<<<<<<< HEAD
 document.getElementById("History Button").addEventListener("click", function(){location.href="History"});
+=======
+document.getElementById("History Button").addEventListener("click", function(){location.href="history.html"});
+>>>>>>> html_fix1
