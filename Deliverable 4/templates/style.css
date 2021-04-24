@@ -9,7 +9,8 @@ body {
 nav {
     list-style-type: none;
     padding:20px;
-    margin-left: 330px
+    margin-left: 330px;
+    display: flex;
 }
 
 main {
@@ -53,6 +54,11 @@ nav a:hover {
 .column {
     float: left;
     padding-right: 18%;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
 }
 
 .mainColumn {
