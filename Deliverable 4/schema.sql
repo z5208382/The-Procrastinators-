@@ -16,8 +16,7 @@ create table Societies (
 );
 
 create table Categories (
-    id          serial, 
-    type        LongString,
+    id          LongString, 
     primary key (id)
 );
 
@@ -32,18 +31,17 @@ create table Events (
 	eventTitle  TextString,
     startDate   LongString, -- change to date once its working 
     endDate     LongString, -- change to date once its working
-    --startTime   LongString,
-    --endTime     LongString, 
     description TextString, 
     location    TextString, 
     host        TextString references Societies(id), 
     eventImage  LongString, 
+    category    LongString references Categories(id),
     primary key (id)
 );
 
 create table EventCategories (
     eventId     integer references Events(id),
-    categoryId  integer references Categories(id),
+    categoryId  LongString references Categories(id),
     primary key (eventId, categoryId)
 );
 

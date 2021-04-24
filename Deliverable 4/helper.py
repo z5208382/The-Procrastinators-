@@ -6,10 +6,11 @@ db = None
 
 def getEvents(): 
     try:
-        db = psycopg2.connect("dbname=template1")
+        db = psycopg2.connect("dbname=seng2021")
         db.autocommit = True
-        cursor = db.cursor()
+        cursor = db.cursor(dictionary=True)
         cursor.execute("Select * From Events where id = 2979283185636941")
+        db.close()
         return cursor.fetchall()
     except psycopg2.Error as err:
         print("DB error: ", err)

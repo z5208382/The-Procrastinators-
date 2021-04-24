@@ -1,44 +1,50 @@
 from json import *
-from flask import Flask, request
-from flask import render_template
+from flask import Flask, request, render_template, make_response, jsonify, json
 import os
 import sys
-import helper
+from helper import getEvents, getFilterEvents, getSocieties, getSociety, getProfile
+
 
 if sys.platform.lower() == "win32": 
     os.system('color')
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/')
 def logIn():
-        return render_template('main.html')
+    return render_template('main.html')
 
 @app.route('/Home')
-def index(): 
-        return render_template('index.html')
+def loadHomePage():
+    events = getEvents()
+    print(f'events: {events}', file=sys.stdout)
+    return render_template('index.html')
 
-@app.route('/Eventdetails')
+# @app.route('/Home', methods=['GET'])
+# def loadEvents():
+#     return jsonify(events)
+
+@app.route('/eventdetails')
 def event():
     return render_template('Eventdetails.html')
 
-@app.route('/Societies')
+@app.route('/societies')
 def socieities(): 
     return render_template('societies.html')
 
-@app.route('/Society')
+@app.route('/society')
 def society(): 
     return render_template('society.html')
 
-@app.route('/Profile')
+@app.route('/profile')
 def profile(): 
     return render_template('profile.html')
 
-@app.route('/Feedback')
+@app.route('/feedback')
 def feedback():
     return render_template('feedback.html')
 
-@app.route('/History')
+@app.route('/history')
 def history(): 
     return render_template('history.html')
 

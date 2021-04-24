@@ -1,22 +1,27 @@
-var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
-fetch(url)
-    .then(r => r.json())
-    .then(r => {
-        for(i = 0; i < r.length; i++){
-            if(!(r[i].image_url.includes("default")))
-            {
-                var index = document.getElementById("eventFeed");
-                const eventImage = document.createElement("img");
-                eventImage.src = r[i].image_url;
-                eventImage.setAttribute("class", "feedImage");
-                id = r[i].id;
-                eventImage.setAttribute("id", id);
-                index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
-            }
-        }
-    });
+// var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
+const url = "http://localhost:5000/Home"
+fetch(url, {
+  method: 'GET'
+})
+  .then ((r) => {
+    // r.json().then(r => {
+    //   for(i = 0; i < r.length; i++) {
+    //       if(!(r[i].image_url.includes("default")))
+    //       {
+    //           var index = document.getElementById("eventFeed");
+    //           const eventImage = document.createElement("img");
+    //           eventImage.src = r[i].image_url;
+    //           eventImage.setAttribute("class", "feedImage");
+    //           id = r[i].id;
+    //           eventImage.setAttribute("id", id);
+    //           index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
+    //       }
+    //   }
+    // });
+    console.log(`r: ${r}`);
+    console.log(`stringified r: ${JSON.stringify(r)}`)
+  })
 
-<<<<<<< HEAD
 // const body = {
 //   id : 1,
 //   url: 2,
@@ -41,8 +46,6 @@ fetch(url)
 //     })
 // });
 
-=======
->>>>>>> html_fix1
 document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});
