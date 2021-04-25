@@ -1,24 +1,21 @@
-let url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
-fetch(url)
-    .then(data => data.json())
-    .then(result => {
-        for (let event of result) {
-            // Using dummy data
-            if (event.id === '2979283185636941') {
-                const imgHeader = event.image_url;
-                const eventName = event.title;
-                const eventLoc = event.location;
-                const time = event.time_start + ' - ' + event.time_finish;
-                const description = event.description;
-
-                document.getElementById('event-image').src = imgHeader;
-                document.getElementById('event-name').innerText = eventName;
-                document.getElementById('event-location').innerText = eventLoc;
-                document.getElementById('event-time').innerText = 'Time: \n' + time;
-                document.getElementById('event-description').innerText = 'Description: \n' + description;
-            }
-        }
-    })
+const url = "http://localhost:5000/Eventdetails"
+fetch(url, {
+  method: 'POST'
+})
+  .then(r => r.json())
+  .then(r => {
+  for(i = 0; i < r.length; i++) {
+    if(!(r[i].image_url.includes("default"))) {
+      var index = document.getElementById("eventFeed");
+      const eventImage = document.createElement("img");
+      eventImage.src = r[i].image_url;
+      eventImage.setAttribute("class", "feedImage");
+      id = r[i].id;
+      eventImage.setAttribute("id", id);
+      index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
+    }
+  }
+})
 
 document.getElementById('feedback-btn').addEventListener('click', () => {
     location.href = "feedback.html";

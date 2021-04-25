@@ -1,27 +1,24 @@
-let url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
-fetch(url)
-    .then(data => data.json())
-    .then(result => {
-        var localUrl = window.location.href;
-        var url = new URL(localUrl);
-        var id = url.searchParams.get("id");
-        for (let event of result) {
-            if (event.id === id) {
-                const imgHeader = event.image_url;
-                const eventName = event.title;
-                const eventLoc = event.location;
-                const time = event.time_start + ' - ' + event.time_finish;
-                const description = event.description;
-
-                document.getElementById('event-image').src = imgHeader;
-                document.getElementById('event-name').innerText = eventName;
-                document.getElementById('event-location').innerText = eventLoc;
-                document.getElementById('event-time').innerText = 'Time: \n' + time;
-                document.getElementById('event-description').innerText = 'Description: \n' + description;
-            }
-        }
-    })
-
+  const url = "http://localhost:5000/Eventdetails";
+  fetch(url, {
+    method: 'POST'
+  })
+  .then(r => r.json())
+  .then(r => {
+    const localUrl = window.location.href;
+    const url = new URL(localUrl);
+    const id = url.searchParams.get("id");
+    for(i = 0; i < r.length; i++) {
+      if(r[i].id === id) {
+        var index = document.getElementById("eventFeed");
+        const eventImage = document.createElement("img");
+        eventImage.src = r[i].image_url;
+        eventImage.setAttribute("class", "feedImage");
+        id = r[i].id;
+        eventImage.setAttribute("id", id);
+        index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
+      }
+    }
+});
 document.getElementById('calendar-btn').addEventListener('click', () => {
     alert("Calendar URL Copied to Clipboard!");
 })

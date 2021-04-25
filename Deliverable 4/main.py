@@ -16,44 +16,65 @@ def logIn():
 
 @app.route('/Home')
 def loadHomePage():
-    events = getEvents()
-    print(f'events: {events}', file=sys.stdout)
     return render_template('index.html')
 
-# @app.route('/Home', methods=['GET'])
-# def loadEvents():
-#     return jsonify(events)
+@app.route('/Home', methods=['POST'])
+def loadEvents():
+    events = getEvents()
+    return jsonify(events)
 
-@app.route('/eventdetails')
-def event():
-    return render_template('Eventdetails.html')
+@app.route('/Eventdetails')
+def loadEventDetailsPage():
+    return render_template('eventdetails.html')
 
-@app.route('/societies')
-def socieities(): 
+@app.route('/Eventdetails', methods=['POST'])
+def loadEventDetails():
+    events = getEvents()
+    return jsonify(events)
+
+@app.route('/Societies')
+def loadSocietiesPage():
     return render_template('societies.html')
 
-@app.route('/society')
-def society(): 
-    return render_template('society.html')
+@app.route('/Societies', methods=['POST'])
+def loadSocieties():
+    societies = getSocieties()
+    return jsonify(societies)
 
-@app.route('/profile')
-def profile(): 
+@app.route('/Society', methods=['GET'])
+def loadSociety():
+    id = request.args.get('id')
+    society = getSociety(id)
+    return render_template('society.html', society=society)
+
+@app.route('/Profile')
+def loadProfilePage(): 
     return render_template('profile.html')
 
-@app.route('/feedback')
+@app.route('/Profile', methods=['POST'])
+def loadProfile(): 
+    events = getEvents()
+    return jsonify(events)
+
+@app.route('/Feedback')
 def feedback():
     return render_template('feedback.html')
 
-@app.route('/history')
-def history(): 
+@app.route('/History')
+def loadHistoryPage(): 
     return render_template('history.html')
 
-# @app.route('/test', methods=['POST', 'GET'])
-# def test():
-#     response = request.get_json()
-#     print(response)
-#     result = {'data' : 'poop'}
-#     return dumps(result)
+@app.route('/History', methods=['POST'])
+def loadHistory(): 
+    events = getEvents()
+    return jsonify(events)
+
+@app.route('/Category', methods=['POST'])
+def loadCategoryEvents():
+    category = request.args.get('category')
+    events = getFilterEvents(category)
+    return render_template('index.html', events=events)
+
 
 if __name__ == '__main__':
     app.run(host='localhost', port=5000, debug=True)

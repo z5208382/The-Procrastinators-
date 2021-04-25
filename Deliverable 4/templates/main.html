@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
-    </head>
-    <body>
-        <header>
-        </header>
-        <main>
-            <div id="main-screen">
-                <img id="main-logo" src="static/unnamed.png" alt="when & where logo">
-                <div id="main-flex">
-                    <button class="main-button" id="main-login-button">Log in</button>
-                    <button class="main-button" id="main-signup-button">Sign up</button>
-                </div>
-            </div>
-            <div id="login-screen">
-                <img id="login-logo" src="static/unnamed.png" alt="when & where logo">
-                <h2>Welcome!</h2>
-                <p id="login-message">Log in to continue</p>
-                <div class="form">
-                    <input type="text" id="email-input" class="input" placeholder="Email"/><br>
-                    <input type="password" id="password-input" class="input" placeholder="Password"/><br>
-                    <input type="checkbox" id="remember-me-checkbox">
-                    <p id="remember-me">Remember me</p>
-                    <a id="forgot-password" href="#">Forgot password?</a>
-                    <button id="login-button">Log in</button>
-                </div>
-                <div class="divider">
-                    <p class="login-divider">or</p>
-                    <hr class="solid-line">
-                </div>
-                <div class="social-media-login">
-                    <img class="social-btn" id="google-login" src="./images/google_sign_up.png" onclick="javascript:alert('redirected to Google account login');">
-                    <img class="social-btn" id="facebook-login" src="./images/Facebook_sign_up.png" onclick="javascript:alert('redirected to Facebook account login');">
-                </div>
-            </div>
-            <div id="signup-screen">
-                <h2>Create an acount</h2>
-                <p id="signup-message">Sign up with your social media account or your email</p>
-                <div class="social-media-login">
-                    <img class="social-btn" id="google-login" src="images/google_sign_up.png" onclick="javascript:alert('redirected to Google account login');">
-                    <img class="social-btn" id="facebook-login" src="images/Facebook_sign_up.png" onclick="javascript:alert('redirected to Facebook account login');">
-                </div>
-                <div class="divider">
-                    <p class="login-divider">or</p>
-                    <hr class="solid-line">
-                </div>
-                <div class="form">
-                    <input type="text" id="name-signup" class="input" placeholder="Name"/>
-                    <input type="text" id="email-signup" class="input" placeholder="Email"/>
-                    <input type="password" id="password-signup" class="input" placeholder="Password"/>
-                    <input type="password" id="confirm-password-signup" class="input" placeholder="Confirm Password"/>
-                </div>
-                <button id="signup-button">Sign Up</button>
-            </div>
-        </main>
-        <script src="static/main.js"></script>
-    </body>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <div id="main-screen">
+        <img id="main-logo" src="static/unnamed.png" alt="when & where logo">
+        <div id="main-flex">
+          <button class="main-button" id="main-login-button">Log in</button>
+          <button class="main-button" id="main-signup-button">Sign up</button>
+        </div>
+      </div>
+      <div id="login-screen">
+        <img id="login-logo" src="static/unnamed.png" alt="when & where logo">
+        <h2>Welcome!</h2>
+        <p id="login-message">Log in to continue</p>
+        <div class="form">
+          <input type="text" id="email-input" class="input" placeholder="Email"/><br>
+          <input type="password" id="password-input" class="input" placeholder="Password"/><br>
+          <input type="checkbox" id="remember-me-checkbox">
+          <p id="remember-me">Remember me</p>
+          <a id="forgot-password" href="#">Forgot password?</a>
+          <button id="login-button">Log in</button>
+        </div>
+        <div class="divider">
+          <p class="login-divider">or</p>
+          <hr class="solid-line">
+        </div>
+        <div class="social-media-login">
+          <img class="social-btn" id="google-login" src="./images/google_sign_up.png" onclick="javascript:alert('redirected to Google account login');">
+          <img class="social-btn" id="facebook-login" src="./images/Facebook_sign_up.png" onclick="javascript:alert('redirected to Facebook account login');">
+        </div>
+      </div>
+      <div id="signup-screen">
+        <h2>Create an acount</h2>
+        <p id="signup-message">Sign up with your social media account or your email</p>
+        <div class="social-media-login">
+            <img class="social-btn" id="google-login" src="images/google_sign_up.png" onclick="javascript:alert('redirected to Google account login');">
+            <img class="social-btn" id="facebook-login" src="images/Facebook_sign_up.png" onclick="javascript:alert('redirected to Facebook account login');">
+        </div>
+        <div class="divider">
+            <p class="login-divider">or</p>
+            <hr class="solid-line">
+        </div>
+        <div class="form">
+            <input type="text" id="name-signup" class="input" placeholder="Name"/>
+            <input type="text" id="email-signup" class="input" placeholder="Email"/>
+            <input type="password" id="password-signup" class="input" placeholder="Password"/>
+            <input type="password" id="confirm-password-signup" class="input" placeholder="Confirm Password"/>
+        </div>
+        <button id="signup-button">Sign Up</button>
+      </div>
+    </main>
+    <script src="static/main.js"></script>
+  </body>
 </html>

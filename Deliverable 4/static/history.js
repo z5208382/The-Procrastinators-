@@ -1,18 +1,19 @@
-var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
-fetch(url)
-    .then(r => r.json())
-    .then(r => {
-        for(i = 0; i < 15; i++){
-            if(!(r[i].image_url.includes("default")))
-            {
-                var index = document.getElementById("eventFeed"); 
-                const eventImage = document.createElement("img");
-                eventImage.src = r[i].image_url;
-                eventImage.setAttribute("class", "feedImage");
-                eventImage.setAttribute("id", "feedImage");
-                index.appendChild(eventImage).addEventListener('click', function(){location.href='Eventdetails';});
-            }
-        }
+const url = "http://localhost:5000/Eventdetails";
+fetch(url, {
+  method: 'POST'
+})
+  .then(r => r.json())
+  .then(r => {
+    for(i = 0; i < 15; i++){
+      if(!(r[i].image_url.includes("default"))) {
+        var index = document.getElementById("eventFeed"); 
+        const eventImage = document.createElement("img");
+        eventImage.src = r[i].image_url;
+        eventImage.setAttribute("class", "feedImage");
+        eventImage.setAttribute("id", "feedImage");
+        index.appendChild(eventImage).addEventListener('click', function(){location.href='Eventdetails';});
+      }
+    }
 });
 
 document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});

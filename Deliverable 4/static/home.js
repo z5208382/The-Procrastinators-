@@ -1,72 +1,42 @@
-// var url = "https://dev-api.linkupevents.com.au/events?uni=unsw&sort_by=time_start&query_string=";
-const url = "http://localhost:5000/Home"
+const url = "http://localhost:5000/Home";
 fetch(url, {
-  method: 'GET'
+  method: 'POST'
 })
-  .then ((r) => {
-    // r.json().then(r => {
-    //   for(i = 0; i < r.length; i++) {
-    //       if(!(r[i].image_url.includes("default")))
-    //       {
-    //           var index = document.getElementById("eventFeed");
-    //           const eventImage = document.createElement("img");
-    //           eventImage.src = r[i].image_url;
-    //           eventImage.setAttribute("class", "feedImage");
-    //           id = r[i].id;
-    //           eventImage.setAttribute("id", id);
-    //           index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
-    //       }
-    //   }
-    // });
-    console.log(`r: ${r}`);
-    console.log(`stringified r: ${JSON.stringify(r)}`)
+  .then(r => r.json())
+  .then(r => {
+    for(i = 0; i < r.length; i++) {
+      if(!(r[i].image_url.includes("default"))) {
+        var index = document.getElementById("eventFeed");
+        const eventImage = document.createElement("img");
+        eventImage.src = r[i].image_url;
+        eventImage.setAttribute("class", "feedImage");
+        id = r[i].id;
+        eventImage.setAttribute("id", id);
+        index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
+      }
+    }
   })
-
-// const body = {
-//   id : 1,
-//   url: 2,
-//   title: 3,
-//   time_start: 4,
-//   time_finish: 5,
-//   description: 6,
-//   location: 7,
-//   hosts: [],
-//   image_url: 8,
-//   categories: []
-// }
-// fetch('http://localhost:5000/home', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type' : 'application/json'
-//   },
-//   body: JSON.stringify(body),
-// }).then((response) => {
-//     response.json().then(result => {
-//       console.log(result.JSON);
-//     })
-// });
+  
+const getSociety = (data) => {
+  if (data !== null) {
+    for(i = 0; i < r.length; i++) {
+      if(!(r[i].image_url.includes("default"))) {
+        var index = document.getElementById("eventFeed");
+        const eventImage = document.createElement("img");
+        eventImage.src = r[i].image_url;
+        eventImage.setAttribute("class", "feedImage");
+        id = r[i].id;
+        eventImage.setAttribute("id", id);
+        index.appendChild(eventImage).addEventListener('click', function(){location.href = "Eventdetails?id="+this.id;});
+      }
+    }
+  }
+}
 
 document.getElementById("Home Button").addEventListener("click", function(){location.href="/";});
 document.getElementById("Societies").addEventListener("click", function(){location.href="Societies"});
 document.getElementById("ProfileButton").addEventListener("click", function(){location.href="Profile"});
 
-// document.getElementById("test-button").addEventListener("click", () => {
-//   console.log('button pressed');
-//   const body = {
-//     test : 1
-//   }
-//   fetch('http://localhost:5000/test', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(body),
-//   }).then((response) => {
-//       response.json().then(result => {
-//         console.log(`response: ${JSON.stringify(result)}`);
-//       })
-//   })
-// });
 // Get the modal
 var modal = document.getElementById("modal");
 
@@ -94,15 +64,15 @@ window.onclick = function(event) {
 }
 
 document.getElementById("Networking Button").addEventListener("click", function(){
-    location.href="/"
+  location.href="/Category?category=networking"
 });
 document.getElementById("Seminar Button").addEventListener("click", function(){
-  location.href="/"
+  location.href="/Category?category=seminar"
 });
 document.getElementById("Social Button").addEventListener("click", function(){
-  location.href="/"
+  location.href="/Category?category=social"
 });
 document.getElementById("Workshop Button").addEventListener("click", function(){
-  location.href="/"
+  location.href="/Category?category=workshop"
 });
 
