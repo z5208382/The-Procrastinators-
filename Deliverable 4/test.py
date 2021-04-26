@@ -30,6 +30,7 @@ try:
             try: 
               cursor.execute("INSERT INTO Events(id, eventTitle, startDate, endDate, description, location, eventImage, category, host) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s)",(id,title,start,finish,description, location, eventImage, category, host))
             except psycopg2.IntegrityError:
+              print("failed")
               db.rollback()
             else:
               db.commit()
